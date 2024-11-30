@@ -2,6 +2,7 @@
 
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { formatNumber } from '@/lib/format-number';
+import { cn } from '@/lib/utils';
 import { useState } from 'react';
 import {
   Area,
@@ -42,11 +43,11 @@ const annualData = [
   { category: '2023', amount: 85000 },
 ];
 
-export function Performance() {
+export function Performance({ className }: { className?: string }) {
   const [activeTab, setActiveTab] = useState('monthly');
 
   return (
-    <section className="rounded-2xl border p-6 col-span-3 row-span-5">
+    <section className={cn('rounded-2xl border p-6', className)}>
       <Tabs
         className="flex flex-col h-full"
         value={activeTab}

@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/lib/utils';
 import { EllipsisVertical } from 'lucide-react';
 import {
   Bar,
@@ -11,11 +12,11 @@ import {
   YAxis,
 } from 'recharts';
 
-export function Dividend() {
+export function Dividend({ className }: { className?: string }) {
   const data = getData();
 
   return (
-    <section className="rounded-2xl border p-6 col-span-2 row-span-3 flex flex-col">
+    <section className={cn('rounded-2xl border p-6 flex flex-col', className)}>
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-lg font-semibold mb-1">Dividend</h2>
 
@@ -54,7 +55,7 @@ export function Dividend() {
             dataKey="amount"
             fill="#F2F4F7"
             activeBar={{ fill: '#465FFF' }}
-            radius={[25, 25, 0, 0]}
+            radius={[18, 18, 0, 0]}
             width={10}
           />
         </BarChart>
