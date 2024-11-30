@@ -8,10 +8,7 @@ import { SearchInput } from './search-input';
 
 export function Header() {
   return (
-    <header
-      className="flex sticky top-0 bg-background shrink-0 items-center
-        gap-4 border-b px-6 py-4"
-    >
+    <header className="flex sticky top-0 z-10 bg-background shrink-0 items-center gap-4 border-b px-6 py-4 bg-slate-50/75 backdrop-blur-xl">
       <SidebarTrigger className="-ml-1 rounded-[8px]" />
 
       <SearchInput />

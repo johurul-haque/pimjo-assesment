@@ -40,7 +40,7 @@ const STOCK_DATA = [
 
 export function Featured() {
   return (
-    <section className="grid grid-cols-[repeat(auto-fill,minmax(15rem,1fr))] gap-6">
+    <section className="grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-6">
       {STOCK_DATA.map((data, i) => (
         <article key={i} className="rounded-[16px] border p-6">
           <figure className="flex items-center">
