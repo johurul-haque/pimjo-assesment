@@ -1,7 +1,7 @@
-import amazon from '@/assets/amazon-alt.svg';
-import apple from '@/assets/apple.svg';
-import paypal from '@/assets/paypal.svg';
-import tesla from '@/assets/tesla.svg';
+import amazon from '@/assets/company-logo/amazon-alt.svg';
+import apple from '@/assets/company-logo/apple.svg';
+import paypal from '@/assets/company-logo/paypal.svg';
+import tesla from '@/assets/company-logo/tesla.svg';
 import { formatNumber } from '@/lib/format-number';
 import { cn } from '@/lib/utils';
 import { ArrowDown, ArrowUp } from 'lucide-react';
