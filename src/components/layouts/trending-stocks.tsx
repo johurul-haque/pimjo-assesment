@@ -74,11 +74,11 @@ export function TrendingStocks({ className }: { className?: string }) {
                 </div>
                 <hr />
                 <div className="flex justify-between items-center text-sm font-medium">
-                  <button className="bg-white border shadow-sm py-3 px-[18.5] rounded-lg box-content">
+                  <button className="bg-white border shadow-sm py-3 px-[18.5px] rounded-lg box-content">
                     Short Stock
                   </button>
 
-                  <button className="text-white bg-accent rounded-lg py-3 px-[18.5]">
+                  <button className="text-white bg-accent rounded-lg py-3 px-[18.5px]">
                     Buy Stock
                   </button>
                 </div>

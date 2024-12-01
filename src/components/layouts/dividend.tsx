@@ -56,7 +56,7 @@ export function Dividend({ className }: { className?: string }) {
             fill="#F2F4F7"
             activeBar={{ fill: '#465FFF' }}
             radius={[18, 18, 0, 0]}
-            width={10}
+            width={1}
           />
         </BarChart>
       </ResponsiveContainer>
@@ -69,7 +69,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
     return (
       <div className="bg-white p-4 border border-gray-200 rounded shadow-lg">
         <p className="font-semibold">{label}</p>
-        <p className="text-blue-600">{`Amount: $${payload[0].value}`}</p>
+        <p className="text-blue-600">{`$ ${payload[0].value}`}</p>
       </div>
     );
   }

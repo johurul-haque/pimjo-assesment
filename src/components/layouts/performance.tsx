@@ -3,7 +3,7 @@
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { formatNumber } from '@/lib/format-number';
 import { cn } from '@/lib/utils';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Area,
   AreaChart,
@@ -44,7 +44,13 @@ const annualData = [
 ];
 
 export function Performance({ className }: { className?: string }) {
-  const [activeTab, setActiveTab] = useState('monthly');
+  const [activeTab, setActiveTab] = useState('month');
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    
+
+  }, [])
 
   return (
     <section className={cn('rounded-2xl border p-6', className)}>
@@ -59,14 +65,14 @@ export function Performance({ className }: { className?: string }) {
               Portfolio Performance
             </h2>
             <p className="text-light-gray">
-              Here is your performance stats of each month
+              Here is your performance stats of each {activeTab}
             </p>
           </div>
 
           <TabsList className="grid grid-cols-3 max-w-xs">
-            <TabsTrigger value="monthly">Monthly</TabsTrigger>
-            <TabsTrigger value="quarterly">Quarterly</TabsTrigger>
-            <TabsTrigger value="annually">Annually</TabsTrigger>
+            <TabsTrigger value="month">Monthly</TabsTrigger>
+            <TabsTrigger value="quarter">Quarterly</TabsTrigger>
+            <TabsTrigger value="year">Annually</TabsTrigger>
           </TabsList>
         </div>
 
@@ -129,7 +135,9 @@ const CustomTooltip = ({ active, payload, label }: any) => {
     return (
       <div className="bg-white p-4 border border-gray-200 rounded shadow-lg">
         <p className="font-semibold">{label}</p>
-        <p className="text-blue-600">{`$ ${formatNumber(payload[0].value)}`}</p>
+        <p className="text-blue-600">{`Close: $ ${formatNumber(
+          payload[0].value
+        )}`}</p>
       </div>
     );
   }
@@ -138,11 +146,11 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 
 function getChartData(activeTab: string) {
   switch (activeTab) {
-    case 'monthly':
+    case 'month':
       return monthlyData;
-    case 'quarterly':
+    case 'quarter':
       return quarterlyData;
-    case 'annually':
+    case 'year':
       return annualData;
     default:
       return monthlyData;
