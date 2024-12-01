@@ -13,7 +13,7 @@ export function Header() {
 
       <SearchInput />
 
-      <div className="ml-auto space-x-3">
+      <div className="ml-auto space-x-3 max-lg:hidden">
         <button className="rounded-full border p-3">
           <span className="sr-only">Toggle color scheme</span>
           <MoonIcon />
@@ -26,7 +26,10 @@ export function Header() {
         </button>
       </div>
 
-      <Button variant="ghost" className="px-3 h-11 hover:text-current">
+      <Button
+        variant="ghost"
+        className="px-3 h-11 max-lg:h-14 max-lg:ml-auto hover:text-current max-lg:hover:bg-transparent shrink-0"
+      >
         <Image
           src={avatar}
           className="rounded-full object-cover mr-1 size-full"
@@ -34,9 +37,9 @@ export function Header() {
           role="presentation"
         />
 
-        <span className="font-medium">Emirhan Boruch</span>
+        <span className="font-medium max-lg:sr-only">Emirhan Boruch</span>
 
-        <ChevronDown />
+        <ChevronDown className="max-lg:hidden" />
       </Button>
     </header>
   );

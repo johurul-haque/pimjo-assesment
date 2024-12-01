@@ -53,7 +53,7 @@ export function Performance({ className }: { className?: string }) {
         value={activeTab}
         onValueChange={setActiveTab}
       >
-        <div className="flex justify-between mb-8">
+        <div className="flex justify-between gap-4 flex-wrap mb-8">
           <div>
             <h2 className="text-lg font-semibold mb-1">
               Portfolio Performance
