@@ -6,9 +6,9 @@ import { WatchList } from '@/components/layouts/watchlist';
 
 export default function Home() {
   return (
-    <main className="max-w-[1800px] w-full mx-auto">
+    <main className="max-w-[1800px] w-full mx-auto grid">
       <Featured />
-      <div className="mt-6 lg:grid grid-cols-5 gap-6 min-h-[776px] grid-rows-7 max-lg:space-y-6 overflow-hidden">
+      <div className="mt-6 lg:grid grid-cols-5 gap-6 min-h-[776px] grid-rows-5 max-lg:space-y-6 overflow-hidden">
         <Performance className="col-span-3 row-span-5" />
         <Dividend className="col-span-2 row-span-3" />
 

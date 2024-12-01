@@ -1,4 +1,4 @@
-import apple from '@/assets/company-logo/apple.svg';
+import * as img from '@/assets/company-logo';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { formatNumber } from '@/lib/format-number';
 import { cn } from '@/lib/utils';
@@ -21,7 +21,7 @@ export function WatchList({ className }: { className?: string }) {
 
       <ScrollArea className="h-[400px] px-6 mb-6">
         <ol className="divide-y">
-          {[...getData(), ...getData()].map((val, i) => (
+          {[...data, ...data].map((val, i) => (
             <li
               className={cn('flex justify-between py-4', i === 0 && 'pt-0')}
               key={i}
@@ -79,35 +79,35 @@ function getData() {
   return [
     {
       name: 'AAPL',
-      img: apple,
+      img: img.apple,
       company: 'Apple, Inc',
       amount: 4008.65,
       increase: 11.01,
     },
     {
       name: 'SPOT',
-      img: null,
+      img: img.spotify,
       company: 'Spotify.com',
       amount: 11689,
       increase: 9.48,
     },
     {
       name: 'ABNB',
-      img: null,
+      img: img.airbnb,
       company: 'Airbnb, Inc',
       amount: 32227,
       decrease: 0.29,
     },
     {
       name: 'ENVT',
-      img: null,
+      img: img.envato,
       company: 'Envato, Inc',
       amount: 13895,
       increase: 3.79,
     },
     {
       name: 'QIWI',
-      img: null,
+      img: img.qiwi,
       company: 'qiwi.com, Inc',
       amount: 4008.65,
       increase: 4.52,
